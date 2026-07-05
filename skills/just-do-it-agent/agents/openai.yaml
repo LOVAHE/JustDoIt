@@ -1,0 +1,4 @@
+interface:
+  display_name: "JustDoIt Agent"
+  short_description: "Autonomous agent workflow with machine entrypoints"
+  default_prompt: "Use $just-do-it-agent to handle this task end to end: investigate, execute, review, verify, and hand off agent-readable entrypoints."
