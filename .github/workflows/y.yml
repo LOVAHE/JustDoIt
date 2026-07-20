@@ -12,10 +12,10 @@ jobs:
         with: {deno-version: v2.x}
       - run: pip install -U 'yt-dlp[default]'
       - run: |
-          : > ytdlp2.txt
+          : > ytdlp3.txt
           for c in default web_safari mweb tv android_vr ios; do
-            echo "### $c" >> ytdlp2.txt
+            echo "### $c" >> ytdlp3.txt
             if [ "$c" = default ]; then a=''; else a="--extractor-args youtube:player_client=$c"; fi
-            yt-dlp --remote-components ejs:github --impersonate chrome $a -F 'https://youtube.com/watch?v=hBAnXVEgWfM' >> ytdlp2.txt 2>&1 || true
+            yt-dlp --remote-components ejs:github --js-runtimes deno $a -F 'https://youtube.com/watch?v=hBAnXVEgWfM' >> ytdlp3.txt 2>&1 || true
           done
-      - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add ytdlp2.txt; git commit -m ytdlp2 || true; git push
+      - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add ytdlp3.txt; git commit -m ytdlp3 || true; git push
