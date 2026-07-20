@@ -13,25 +13,25 @@ jobs:
       - run: pip install -U 'yt-dlp[default]'
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq openvpn
       - run: |
-          : > vpngate2.txt
-          python tmp_vpngate.py >> vpngate2.txt 2>&1 || true
-          cat vpngate-nodes.txt >> vpngate2.txt 2>&1 || true
+          : > bitrate-G7VkIzFzfKc.txt
+          python tmp_vpngate.py >> bitrate-G7VkIzFzfKc.txt 2>&1 || true
+          cat vpngate-nodes.txt >> bitrate-G7VkIzFzfKc.txt 2>&1 || true
           for f in /tmp/vpn-*.ovpn; do
-            echo "### $f" >> vpngate2.txt
+            echo "### $f" >> bitrate-G7VkIzFzfKc.txt
             sudo ip link delete tun0 2>/dev/null || true
             sudo openvpn --config "$f" > /tmp/ovpn.log 2>&1 & pid=$!
             up=0; for i in $(seq 1 30); do if ip link show tun0 >/dev/null 2>&1; then up=1; break; fi; sleep 1; done
-            if [ "$up" != 1 ]; then echo NO_TUN >> vpngate2.txt; tail -30 /tmp/ovpn.log >> vpngate2.txt; sudo kill $pid 2>/dev/null || true; continue; fi
+            if [ "$up" != 1 ]; then echo NO_TUN >> bitrate-G7VkIzFzfKc.txt; tail -30 /tmp/ovpn.log >> bitrate-G7VkIzFzfKc.txt; sudo kill $pid 2>/dev/null || true; continue; fi
             src=$(ip -4 addr show tun0 | awk '/inet /{print $2}' | cut -d/ -f1)
-            echo "VPN_LOCAL=$src" >> vpngate2.txt
+            echo "VPN_LOCAL=$src" >> bitrate-G7VkIzFzfKc.txt
             sudo ip route flush table 100 || true
             sudo ip route add table 100 default dev tun0
             sudo ip rule add priority 100 from "$src/32" table 100
-            curl --interface "$src" -sS --max-time 15 https://api.ipify.org >> vpngate2.txt 2>&1 || true; echo >> vpngate2.txt
-            if yt-dlp --source-address "$src" --socket-timeout 25 --retries 1 --remote-components ejs:github --js-runtimes deno -F 'https://youtube.com/watch?v=hBAnXVEgWfM' >> vpngate2.txt 2>&1; then ok=1; else ok=0; fi
+            curl --interface "$src" -sS --max-time 15 https://api.ipify.org >> bitrate-G7VkIzFzfKc.txt 2>&1 || true; echo >> bitrate-G7VkIzFzfKc.txt
+            if yt-dlp --source-address "$src" --socket-timeout 25 --retries 1 --remote-components ejs:github --js-runtimes deno -F 'https://youtube.com/watch?v=G7VkIzFzfKc' >> bitrate-G7VkIzFzfKc.txt 2>&1; then ok=1; else ok=0; fi
             sudo ip rule del priority 100 2>/dev/null || true; sudo ip route flush table 100 || true
             sudo kill $pid 2>/dev/null || true; wait $pid 2>/dev/null || true; sudo ip link delete tun0 2>/dev/null || true
-            if [ "$ok" = 1 ]; then echo SUCCESS >> vpngate2.txt; break; fi
+            if [ "$ok" = 1 ]; then echo SUCCESS >> bitrate-G7VkIzFzfKc.txt; break; fi
           done
       - if: always()
-        run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add vpngate2.txt vpngate-nodes.txt; git commit -m vpngate2 || true; git push
+        run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add bitrate-G7VkIzFzfKc.txt vpngate-nodes.txt; git commit -m bitrate-G7VkIzFzfKc || true; git push
