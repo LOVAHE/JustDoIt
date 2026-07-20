@@ -1,0 +1,28 @@
+### pipedapi.kavin.rocks
+### pipedapi.ducks.party
+curl: (28) Connection timed out after 35001 milliseconds
+### piped-api.codespace.cz
+curl: (6) Could not resolve host: piped-api.codespace.cz
+### pipedapi.reallyaweso.me
+### api.piped.private.coffee
+{"title":null,"duration":null,"uploader":null,"audioStreams":[],"videoStreams":[]}
+### pipedapi.darkness.services
+curl: (6) Could not resolve host: pipedapi.darkness.services
+### pipedapi.orangenet.cc
+jq: parse error: Invalid numeric literal at line 1, column 10
+### pipedapi.leptons.xyz
+jq: parse error: Invalid numeric literal at line 1, column 10
+### pipedapi.nosebs.ru
+curl: (6) Could not resolve host: pipedapi.nosebs.ru
+### pipedapi-libre.kavin.rocks
+jq: parse error: Invalid numeric literal at line 1, column 7
+### piped-api.privacy.com.de
+curl: (6) Could not resolve host: piped-api.privacy.com.de
+### pipedapi.adminforge.de
+curl: (6) Could not resolve host: adminforge.destreams
+### api.piped.yt
+curl: (6) Could not resolve host: api.piped.yt
+### pipedapi.drgns.space
+curl: (28) Connection timed out after 35001 milliseconds
+### pipedapi.owo.si
+curl: (6) Could not resolve host: pipedapi.owo.si
