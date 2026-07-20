@@ -1,0 +1,25 @@
+8
+[youtube] Extracting URL: https://youtube.com/watch?v=F0x12GzMnyY
+[youtube] F0x12GzMnyY: Downloading webpage
+[youtube] F0x12GzMnyY: Downloading android vr player API JSON
+[info] F0x12GzMnyY: Downloading 1 format(s): 299
+[info] F0x12GzMnyY: Downloading 1 time ranges: 600.0-660.0
+[download] Destination: dash299.mp4
+[https @ 0x5572af5aeb40] HTTP error 403 Forbidden
+[in#0 @ 0x5572af5addc0] Error opening input: Server returned 403 Forbidden (access denied)
+Error opening input file https://rr4---sn-qja5mc-54.googlevideo.com/videoplayback?expire=1784608858&ei=-qNearqPHOGut7EPmtPssAM&ip=47.153.119.84&id=o-AFCntuIkDpEtORGYskot8Kb46AqIi5fk_5udNu7O2xzi&itag=299&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=236&met=1784587258%2C&mh=8Q&mm=31%2C26&mn=sn-qja5mc-54%2Csn-vgqsrn66&ms=au%2Conr&mv=m&mvi=4&pl=14&rms=au%2Cau&initcwndbps=3968750&bui=AZFlqhNJXfeVORkuTmqm6ipBecQ6BySAKFuRoMgw8jOh4VrwLoTy9pVwM6rTQRWL82vgpnQkVQDwK6pu&spc=SQ-umsNqRcnUL6rF2MFzDgEJwbomQx3IyNYim6SAXull&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=3896608168&dur=12805.433&lmt=1783691970709259&mt=1784587041&fvip=2&keepalive=yes&fexp=51565116%2C51992867&c=ANDROID_VR&txp=6209224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AE0s2JYwRgIhAP3oKn4D2seU5f7vm5LDH_oH7eqVN1v8Cva4my9tZ055AiEAz-UiT9seyrU-MoayNt3FTlqLX67utlQtLcTgoyOhcPM%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRAIgJvMtMyGbu609X3ComarBPVFUrGJqkMCp4CbUG6EwWMoCIH9GYiH2iT9ZUlP_nzH2zZGtN1XJP_9C8IfTvSzO0qmo.
+Error opening input files: Server returned 403 Forbidden (access denied)
+
+
+ERROR: ffmpeg exited with code 8
+
+[youtube] Extracting URL: https://youtube.com/watch?v=F0x12GzMnyY
+[youtube] F0x12GzMnyY: Downloading webpage
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] F0x12GzMnyY: Requested format is not available. Use --list-formats for a list of available formats
+===== dash299.mp4 =====
+ls: cannot access 'dash299.mp4': No such file or directory
+dash299.mp4: No such file or directory
+{
+
+}
