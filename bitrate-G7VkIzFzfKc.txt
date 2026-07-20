@@ -1,0 +1,99 @@
+8
+1	JP	219.100.37.224	2958032	124477025
+2	US	156.47.255.221	1993309	178618866
+3	KR	1.224.30.13	1466429	308429825
+4	RO	217.138.212.62	1391188	300683654
+5	CA	184.68.30.116	1229804	14554415
+6	TH	184.22.181.244	762525	164782716
+7	RU	109.203.207.155	641147	52837556
+8	UA	178.151.36.49	609261	71659814
+### /tmp/vpn-1.ovpn
+NO_TUN
+2026-07-20 15:24:03 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2026-07-20 15:24:03 OpenVPN 2.6.19 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] [DCO]
+2026-07-20 15:24:03 library versions: OpenSSL 3.0.13 30 Jan 2024, LZO 2.10
+2026-07-20 15:24:03 DCO version: N/A
+2026-07-20 15:24:03 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2026-07-20 15:24:03 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.224:443
+2026-07-20 15:24:03 Socket Buffers: R=[131072->131072] S=[16384->16384]
+2026-07-20 15:24:03 Attempting to establish TCP connection with [AF_INET]219.100.37.224:443
+2026-07-20 15:24:04 TCP connection established with [AF_INET]219.100.37.224:443
+2026-07-20 15:24:04 TCPv4_CLIENT link local: (not bound)
+2026-07-20 15:24:04 TCPv4_CLIENT link remote: [AF_INET]219.100.37.224:443
+2026-07-20 15:24:04 TLS: Initial packet from [AF_INET]219.100.37.224:443, sid=8dc42b39 af916bad
+2026-07-20 15:24:04 VERIFY OK: depth=3, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2026-07-20 15:24:04 VERIFY OK: depth=2, C=US, O=ISRG, CN=Root YR
+2026-07-20 15:24:04 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=YR2
+2026-07-20 15:24:04 VERIFY OK: depth=0, CN=opengw.net
+2026-07-20 15:24:04 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2026-07-20 15:24:04 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.224:443
+2026-07-20 15:24:04 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2026-07-20 15:24:04 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2026-07-20 15:24:05 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2026-07-20 15:24:10 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2026-07-20 15:24:11 AUTH: Received control message: AUTH_FAILED
+2026-07-20 15:24:11 SIGTERM[soft,auth-failure] received, process exiting
+### /tmp/vpn-2.ovpn
+NO_TUN
+2026-07-20 15:24:33 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2026-07-20 15:24:33 OpenVPN 2.6.19 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] [DCO]
+2026-07-20 15:24:33 library versions: OpenSSL 3.0.13 30 Jan 2024, LZO 2.10
+2026-07-20 15:24:33 DCO version: N/A
+2026-07-20 15:24:33 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2026-07-20 15:24:33 TCP/UDP: Preserving recently used remote address: [AF_INET]156.47.255.221:1575
+2026-07-20 15:24:33 Socket Buffers: R=[131072->131072] S=[16384->16384]
+2026-07-20 15:24:33 Attempting to establish TCP connection with [AF_INET]156.47.255.221:1575
+2026-07-20 15:24:34 TCP connection established with [AF_INET]156.47.255.221:1575
+2026-07-20 15:24:34 TCPv4_CLIENT link local: (not bound)
+2026-07-20 15:24:34 TCPv4_CLIENT link remote: [AF_INET]156.47.255.221:1575
+2026-07-20 15:24:34 TLS: Initial packet from [AF_INET]156.47.255.221:1575, sid=c7af105f 75f8197a
+2026-07-20 15:24:34 VERIFY OK: depth=3, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2026-07-20 15:24:34 VERIFY OK: depth=2, C=US, O=ISRG, CN=Root YR
+2026-07-20 15:24:34 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=YR2
+2026-07-20 15:24:34 VERIFY OK: depth=0, CN=opengw.net
+2026-07-20 15:24:34 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2026-07-20 15:24:34 [opengw.net] Peer Connection Initiated with [AF_INET]156.47.255.221:1575
+2026-07-20 15:24:34 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2026-07-20 15:24:34 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2026-07-20 15:24:36 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2026-07-20 15:24:36 AUTH: Received control message: AUTH_FAILED
+2026-07-20 15:24:36 SIGTERM[soft,auth-failure] received, process exiting
+### /tmp/vpn-3.ovpn
+VPN_LOCAL=10.211.1.13
+110.9.201.70
+[youtube] Extracting URL: https://youtube.com/watch?v=G7VkIzFzfKc
+[youtube] G7VkIzFzfKc: Downloading webpage
+[youtube] G7VkIzFzfKc: Downloading android vr player API JSON
+[info] Available formats for G7VkIzFzfKc:
+ID  EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC          VBR ACODEC      ABR ASR MORE INFO
+-----------------------------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                  mhtml | images                                  storyboard
+sb2 mhtml 80x45        0    |                  mhtml | images                                  storyboard
+sb1 mhtml 160x90       0    |                  mhtml | images                                  storyboard
+sb0 mhtml 320x180      0    |                  mhtml | images                                  storyboard
+139 m4a   audio only      2 |   46.74MiB   49k https | audio only          mp4a.40.5   49k 22k low, m4a_dash
+249 webm  audio only      2 |   43.84MiB   46k https | audio only          opus        46k 48k low, webm_dash
+140 m4a   audio only      2 |  124.06MiB  129k https | audio only          mp4a.40.2  129k 44k medium, m4a_dash
+251 webm  audio only      2 |  115.66MiB  121k https | audio only          opus       121k 48k medium, webm_dash
+160 mp4   256x144     30    |   97.69MiB  102k https | avc1.4d400c    102k video only          144p, mp4_dash
+278 webm  256x144     30    |   85.01MiB   89k https | vp9             89k video only          144p, webm_dash
+394 mp4   256x144     30    |   73.77MiB   77k https | av01.0.00M.08   77k video only          144p, mp4_dash
+133 mp4   426x240     30    |  216.06MiB  225k https | avc1.4d4015    225k video only          240p, mp4_dash
+242 webm  426x240     30    |  174.66MiB  182k https | vp9            182k video only          240p, webm_dash
+395 mp4   426x240     30    |  156.18MiB  163k https | av01.0.00M.08  163k video only          240p, mp4_dash
+134 mp4   640x360     30    |  471.33MiB  492k https | avc1.4d401e    492k video only          360p, mp4_dash
+18  mp4   640x360     30  2 |  517.03MiB  540k https | avc1.42001E         mp4a.40.2       22k 360p
+243 webm  640x360     30    |  308.62MiB  322k https | vp9            322k video only          360p, webm_dash
+396 mp4   640x360     30    |  327.67MiB  342k https | av01.0.01M.08  342k video only          360p, mp4_dash
+135 mp4   854x480     30    |  883.97MiB  923k https | avc1.4d401f    923k video only          480p, mp4_dash
+244 webm  854x480     30    |  579.52MiB  605k https | vp9            605k video only          480p, webm_dash
+397 mp4   854x480     30    |  620.24MiB  647k https | av01.0.04M.08  647k video only          480p, mp4_dash
+298 mp4   1280x720    60    |    2.53GiB 2704k https | avc1.640020   2704k video only          720p60, mp4_dash
+302 webm  1280x720    60    |    1.82GiB 1944k https | vp9           1944k video only          720p60, webm_dash
+398 mp4   1280x720    60    |    1.54GiB 1646k https | av01.0.08M.08 1646k video only          720p60, mp4_dash
+299 mp4   1920x1080   60    |    4.49GiB 4797k https | avc1.64002a   4797k video only          1080p60, mp4_dash
+303 webm  1920x1080   60    |    2.79GiB 2978k https | vp9           2978k video only          1080p60, webm_dash
+399 mp4   1920x1080   60    |    3.12GiB 3333k https | av01.0.09M.08 3333k video only          1080p60, mp4_dash
+308 webm  2560x1440   60    |    8.15GiB 8708k https | vp9           8708k video only          1440p60, webm_dash
+400 mp4   2560x1440   60    |    8.45GiB 9033k https | av01.0.12M.08 9033k video only          1440p60, mp4_dash
+SUCCESS
