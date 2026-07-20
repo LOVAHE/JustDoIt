@@ -1,0 +1,97 @@
+8
+1	JP	219.100.37.55	2772770	207871496
+2	US	158.247.185.7	1971000	171423726
+3	KR	121.164.146.116	1483824	58178948
+4	RO	217.138.212.62	1452536	187784816
+5	CN	103.230.213.253	1305756	46106072
+6	RU	95.27.40.220	793126	23159589
+7	FI	84.251.69.243	698638	161637706
+8	CA	166.62.190.20	622444	51020756
+### /tmp/vpn-1.ovpn
+NO_TUN
+### /tmp/vpn-2.ovpn
+===== CLIENT default =====
+[youtube] Extracting URL: https://youtube.com/watch?v=F0x12GzMnyY
+[youtube] F0x12GzMnyY: Downloading webpage
+[youtube] F0x12GzMnyY: Downloading android vr player API JSON
+[info] Available formats for F0x12GzMnyY:
+ID  EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC        VBR ACODEC      ABR ASR MORE INFO
+--------------------------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                  mhtml | images                                storyboard
+sb2 mhtml 80x45        0    |                  mhtml | images                                storyboard
+sb1 mhtml 160x90       0    |                  mhtml | images                                storyboard
+sb0 mhtml 320x180      0    |                  mhtml | images                                storyboard
+139 m4a   audio only      2 |   74.47MiB   49k https | audio only        mp4a.40.5   49k 22k low, m4a_dash
+140 m4a   audio only      2 |  197.64MiB  129k https | audio only        mp4a.40.2  129k 44k medium, m4a_dash
+251 webm  audio only      2 |  177.18MiB  116k https | audio only        opus       116k 48k medium, webm_dash
+160 mp4   256x144     30    |   84.67MiB   55k https | avc1.4d400c   55k video only          144p, mp4_dash
+134 mp4   640x360     30    |  374.46MiB  245k https | avc1.4d401e  245k video only          360p, mp4_dash
+18  mp4   640x360     30  2 |  446.80MiB  293k https | avc1.42001E       mp4a.40.2       22k 360p
+298 mp4   1280x720    60    |    1.95GiB 1306k https | avc1.640020 1306k video only          720p60, mp4_dash
+299 mp4   1920x1080   60    |    3.63GiB 2434k https | avc1.64002a 2434k video only          1080p60, mp4_dash
+===== CLIENT ios =====
+[youtube] Extracting URL: https://youtube.com/watch?v=F0x12GzMnyY
+[youtube] F0x12GzMnyY: Downloading webpage
+[youtube] F0x12GzMnyY: Downloading ios player API JSON
+WARNING: [youtube] F0x12GzMnyY: ios client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+WARNING: Only images are available for download. use --list-formats to see them
+[info] Available formats for F0x12GzMnyY:
+ID  EXT   RESOLUTION FPS | PROTO | VCODEC MORE INFO
+----------------------------------------------------
+sb3 mhtml 48x27        0 | mhtml | images storyboard
+sb2 mhtml 80x45        0 | mhtml | images storyboard
+sb1 mhtml 160x90       0 | mhtml | images storyboard
+sb0 mhtml 320x180      0 | mhtml | images storyboard
+===== CLIENT tv =====
+[youtube] Extracting URL: https://youtube.com/watch?v=F0x12GzMnyY
+[youtube] F0x12GzMnyY: Downloading webpage
+[youtube] F0x12GzMnyY: Downloading tv client config
+[youtube] F0x12GzMnyY: Downloading player dfc3d2b2-main
+[youtube] F0x12GzMnyY: Downloading tv player API JSON
+WARNING: [youtube] F0x12GzMnyY: Some tv client https formats have been skipped as they are DRM protected. The current session may have an experiment that applies DRM to all videos on the tv client. See  https://github.com/yt-dlp/yt-dlp/issues/12563  for more details.
+[youtube] [jsc:deno] Solving JS challenges using deno
+WARNING: This video is drm protected and only images are available for download. use --list-formats to see them
+[info] Available formats for F0x12GzMnyY:
+ID  EXT   RESOLUTION FPS | PROTO | VCODEC MORE INFO
+----------------------------------------------------
+sb3 mhtml 48x27        0 | mhtml | images storyboard
+sb2 mhtml 80x45        0 | mhtml | images storyboard
+sb1 mhtml 160x90       0 | mhtml | images storyboard
+sb0 mhtml 320x180      0 | mhtml | images storyboard
+===== CLIENT web_safari =====
+[youtube] Extracting URL: https://youtube.com/watch?v=F0x12GzMnyY
+[youtube] F0x12GzMnyY: Downloading webpage
+[youtube] F0x12GzMnyY: Downloading player dfc3d2b2-main
+[youtube] [jsc:deno] Solving JS challenges using deno
+[youtube] F0x12GzMnyY: Downloading m3u8 information
+[info] Available formats for F0x12GzMnyY:
+ID  EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC      ACODEC    ASR MORE INFO
+-------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                  mhtml | images                    storyboard
+sb2 mhtml 80x45        0    |                  mhtml | images                    storyboard
+sb1 mhtml 160x90       0    |                  mhtml | images                    storyboard
+sb0 mhtml 320x180      0    |                  mhtml | images                    storyboard
+91  mp4   256x144     30    | ~297.90MiB  195k m3u8  | avc1.4D400C mp4a.40.5
+93  mp4   640x360     30    | ~  1.18GiB  793k m3u8  | avc1.4D401E mp4a.40.2
+18  mp4   640x360     30  2 |  446.80MiB  293k https | avc1.42001E mp4a.40.2 22k 360p
+300 mp4   1280x720    60    | ~  6.43GiB 4317k m3u8  | avc1.640020 mp4a.40.2
+301 mp4   1920x1080   60    | ~ 10.94GiB 7341k m3u8  | avc1.64002A mp4a.40.2
+===== CLIENT android_vr =====
+[youtube] Extracting URL: https://youtube.com/watch?v=F0x12GzMnyY
+[youtube] F0x12GzMnyY: Downloading webpage
+[youtube] F0x12GzMnyY: Downloading android vr player API JSON
+[info] Available formats for F0x12GzMnyY:
+ID  EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC        VBR ACODEC      ABR ASR MORE INFO
+--------------------------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                  mhtml | images                                storyboard
+sb2 mhtml 80x45        0    |                  mhtml | images                                storyboard
+sb1 mhtml 160x90       0    |                  mhtml | images                                storyboard
+sb0 mhtml 320x180      0    |                  mhtml | images                                storyboard
+139 m4a   audio only      2 |   74.47MiB   49k https | audio only        mp4a.40.5   49k 22k low, m4a_dash
+140 m4a   audio only      2 |  197.64MiB  129k https | audio only        mp4a.40.2  129k 44k medium, m4a_dash
+251 webm  audio only      2 |  177.18MiB  116k https | audio only        opus       116k 48k medium, webm_dash
+160 mp4   256x144     30    |   84.67MiB   55k https | avc1.4d400c   55k video only          144p, mp4_dash
+134 mp4   640x360     30    |  374.46MiB  245k https | avc1.4d401e  245k video only          360p, mp4_dash
+18  mp4   640x360     30  2 |  446.80MiB  293k https | avc1.42001E       mp4a.40.2       22k 360p
+298 mp4   1280x720    60    |    1.95GiB 1306k https | avc1.640020 1306k video only          720p60, mp4_dash
+299 mp4   1920x1080   60    |    3.63GiB 2434k https | avc1.64002a 2434k video only          1080p60, mp4_dash
