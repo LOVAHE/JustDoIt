@@ -1,0 +1,63 @@
+### web_embedded
+[youtube] Extracting URL: https://youtube.com/watch?v=hBAnXVEgWfM
+[youtube] hBAnXVEgWfM: Downloading initial data API JSON
+[youtube] hBAnXVEgWfM: Downloading iframe API JS
+[youtube] hBAnXVEgWfM: Downloading player 882a803a-main
+[youtube] hBAnXVEgWfM: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] hBAnXVEgWfM: This video is unavailable. Error code: 152 - 18 Watch video on YouTube
+### visionos
+[youtube] Extracting URL: https://youtube.com/watch?v=hBAnXVEgWfM
+[youtube] hBAnXVEgWfM: Downloading initial data API JSON
+WARNING: [youtube] Skipping unsupported client "visionos"
+[youtube] hBAnXVEgWfM: Downloading android vr player API JSON
+[youtube] hBAnXVEgWfM: Downloading iframe API JS
+[youtube] hBAnXVEgWfM: Downloading player 882a803a-main
+[youtube] hBAnXVEgWfM: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] hBAnXVEgWfM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+### tv_downgraded
+[youtube] Extracting URL: https://youtube.com/watch?v=hBAnXVEgWfM
+[youtube] hBAnXVEgWfM: Downloading initial data API JSON
+[youtube] hBAnXVEgWfM: Downloading iframe API JS
+[youtube] hBAnXVEgWfM: Downloading player dfc3d2b2-main
+[youtube] hBAnXVEgWfM: Downloading tv downgraded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] hBAnXVEgWfM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+### tv_simply
+[youtube] Extracting URL: https://youtube.com/watch?v=hBAnXVEgWfM
+[youtube] hBAnXVEgWfM: Downloading initial data API JSON
+[youtube] hBAnXVEgWfM: Downloading iframe API JS
+[youtube] hBAnXVEgWfM: Downloading player 882a803a-main
+[youtube] hBAnXVEgWfM: Downloading tv simply player API JSON
+ERROR: [youtube] hBAnXVEgWfM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+### android
+[youtube] Extracting URL: https://youtube.com/watch?v=hBAnXVEgWfM
+[youtube] hBAnXVEgWfM: Downloading initial data API JSON
+[youtube] hBAnXVEgWfM: Downloading android player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] hBAnXVEgWfM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+### web
+[youtube] Extracting URL: https://youtube.com/watch?v=hBAnXVEgWfM
+[youtube] hBAnXVEgWfM: Downloading initial data API JSON
+[youtube] hBAnXVEgWfM: Downloading iframe API JS
+[youtube] hBAnXVEgWfM: Downloading player 882a803a-main
+[youtube] hBAnXVEgWfM: Downloading web player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] hBAnXVEgWfM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+### web_safari
+[youtube] Extracting URL: https://youtube.com/watch?v=hBAnXVEgWfM
+[youtube] hBAnXVEgWfM: Downloading initial data API JSON
+[youtube] hBAnXVEgWfM: Downloading iframe API JS
+[youtube] hBAnXVEgWfM: Downloading player 882a803a-main
+[youtube] hBAnXVEgWfM: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] hBAnXVEgWfM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+### mweb
+[youtube] Extracting URL: https://youtube.com/watch?v=hBAnXVEgWfM
+[youtube] hBAnXVEgWfM: Downloading initial data API JSON
+[youtube] hBAnXVEgWfM: Downloading iframe API JS
+[youtube] hBAnXVEgWfM: Downloading player 882a803a-main
+[youtube] hBAnXVEgWfM: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] hBAnXVEgWfM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
