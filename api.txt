@@ -1,5 +1,9 @@
-### inv.nadeko.net
-jq: parse error: Invalid numeric literal at line 1, column 9
-### invidious.nerdvpn.de
-jq: parse error: Invalid numeric literal at line 1, column 7
-### yt.chocolatemoo53.com
+### pipedapi.kavin.rocks
+### pipedapi.tokhmi.xyz
+### pipedapi.moomoo.me
+jq: parse error: Invalid numeric literal at line 1, column 6
+### pipedapi.syncpundit.io
+jq: parse error: Invalid numeric literal at line 1, column 10
+### api-piped.mha.fi
+jq: parse error: Invalid numeric literal at line 1, column 6
+### piped-api.garudalinux.org
