@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           : > api.txt
-          for h in pipedapi.kavin.rocks pipedapi.tokhmi.xyz pipedapi.moomoo.me pipedapi.syncpundit.io api-piped.mha.fi piped-api.garudalinux.org; do
+          for h in pipedapi.kavin.rocks pipedapi.leptons.xyz pipedapi.nosebs.ru pipedapi-libre.kavin.rocks piped-api.privacy.com.de pipedapi.adminforge.de api.piped.yt pipedapi.drgns.space pipedapi.owo.si pipedapi.ducks.party piped-api.codespace.cz pipedapi.reallyaweso.me api.piped.private.coffee pipedapi.darkness.services pipedapi.orangenet.cc; do
             echo "### $h" >> api.txt
-            curl -A 'Mozilla/5.0' -L --max-time 120 -sS "https://$h/streams/hBAnXVEgWfM" | jq -c '{title,duration,uploader,audioStreams:[.audioStreams[]?|{bitrate,codec,format,mimeType,quality}],videoStreams:[.videoStreams[]?|{bitrate,codec,format,mimeType,quality,width,height,fps,videoOnly}]}' >> api.txt 2>&1 || true
+            curl -A 'Mozilla/5.0' -L --max-time 90 -sS "https://$h/streams/hBAnXVEgWfM" | jq -c '{title,duration,uploader,audioStreams:[.audioStreams[]?|{bitrate,codec,format,mimeType,quality}],videoStreams:[.videoStreams[]?|{bitrate,codec,format,mimeType,quality,width,height,fps,videoOnly}]}' >> api.txt 2>&1 || true
           done
       - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add api.txt; git commit -m api || true; git push
