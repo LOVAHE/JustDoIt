@@ -9,8 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          for h in inv.nadeko.net invidious.nerdvpn.de yt.chocolatemoo53.com; do
-            echo "### $h"
-            curl -A 'Mozilla/5.0' -L --max-time 90 -sS "https://$h/api/v1/videos/hBAnXVEgWfM" | jq -c '{title,lengthSeconds,adaptiveFormats,formatStreams}' || true
-          done > api.txt 2>&1
+          : > api.txt
+          for h in pipedapi.kavin.rocks pipedapi.tokhmi.xyz pipedapi.moomoo.me pipedapi.syncpundit.io api-piped.mha.fi piped-api.garudalinux.org; do
+            echo "### $h" >> api.txt
+            curl -A 'Mozilla/5.0' -L --max-time 120 -sS "https://$h/streams/hBAnXVEgWfM" | jq -c '{title,duration,uploader,audioStreams:[.audioStreams[]?|{bitrate,codec,format,mimeType,quality}],videoStreams:[.videoStreams[]?|{bitrate,codec,format,mimeType,quality,width,height,fps,videoOnly}]}' >> api.txt 2>&1 || true
+          done
       - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add api.txt; git commit -m api || true; git push
