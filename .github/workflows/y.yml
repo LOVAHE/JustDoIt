@@ -1,0 +1,13 @@
+name: y
+on:
+  push:
+    paths: ['.github/workflows/y.yml']
+permissions: {contents: write}
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install yt-dlp
+      - run: yt-dlp -F 'https://youtube.com/watch?v=hBAnXVEgWfM' > ytdlp.txt 2>&1 || true
+      - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add ytdlp.txt; git commit -m y || true; git push
