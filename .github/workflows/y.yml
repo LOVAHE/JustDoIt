@@ -13,25 +13,26 @@ jobs:
       - run: pip install -U 'yt-dlp[default]'
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq openvpn
       - run: |
-          : > bitrate-F0x12GzMnyY.txt
-          python tmp_vpngate.py >> bitrate-F0x12GzMnyY.txt 2>&1 || true
-          cat vpngate-nodes.txt >> bitrate-F0x12GzMnyY.txt 2>&1 || true
+          : > bitrate-F0x12GzMnyY-clients.txt
+          python tmp_vpngate.py >> bitrate-F0x12GzMnyY-clients.txt 2>&1 || true
+          cat vpngate-nodes.txt >> bitrate-F0x12GzMnyY-clients.txt 2>&1 || true
           for f in /tmp/vpn-*.ovpn; do
-            echo "### $f" >> bitrate-F0x12GzMnyY.txt
+            echo "### $f" >> bitrate-F0x12GzMnyY-clients.txt
             sudo ip link delete tun0 2>/dev/null || true
             sudo openvpn --config "$f" > /tmp/ovpn.log 2>&1 & pid=$!
             up=0; for i in $(seq 1 30); do if ip link show tun0 >/dev/null 2>&1; then up=1; break; fi; sleep 1; done
-            if [ "$up" != 1 ]; then echo NO_TUN >> bitrate-F0x12GzMnyY.txt; tail -30 /tmp/ovpn.log >> bitrate-F0x12GzMnyY.txt; sudo kill $pid 2>/dev/null || true; continue; fi
+            if [ "$up" != 1 ]; then echo NO_TUN >> bitrate-F0x12GzMnyY-clients.txt; sudo kill $pid 2>/dev/null || true; continue; fi
             src=$(ip -4 addr show tun0 | awk '/inet /{print $2}' | cut -d/ -f1)
-            echo "VPN_LOCAL=$src" >> bitrate-F0x12GzMnyY.txt
             sudo ip route flush table 100 || true
             sudo ip route add table 100 default dev tun0
             sudo ip rule add priority 100 from "$src/32" table 100
-            curl --interface "$src" -sS --max-time 15 https://api.ipify.org >> bitrate-F0x12GzMnyY.txt 2>&1 || true; echo >> bitrate-F0x12GzMnyY.txt
-            if yt-dlp --source-address "$src" --socket-timeout 25 --retries 1 --remote-components ejs:github --js-runtimes deno -F 'https://youtube.com/watch?v=F0x12GzMnyY' >> bitrate-F0x12GzMnyY.txt 2>&1; then ok=1; else ok=0; fi
+            for c in default ios tv web_safari android_vr; do
+              echo "===== CLIENT $c =====" >> bitrate-F0x12GzMnyY-clients.txt
+              yt-dlp --source-address "$src" --socket-timeout 25 --retries 1 --remote-components ejs:github --js-runtimes deno --extractor-args "youtube:player_client=$c" -F 'https://youtube.com/watch?v=F0x12GzMnyY' >> bitrate-F0x12GzMnyY-clients.txt 2>&1 || true
+            done
             sudo ip rule del priority 100 2>/dev/null || true; sudo ip route flush table 100 || true
             sudo kill $pid 2>/dev/null || true; wait $pid 2>/dev/null || true; sudo ip link delete tun0 2>/dev/null || true
-            if [ "$ok" = 1 ]; then echo SUCCESS >> bitrate-F0x12GzMnyY.txt; break; fi
+            break
           done
       - if: always()
-        run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add bitrate-F0x12GzMnyY.txt vpngate-nodes.txt; git commit -m bitrate-F0x12GzMnyY || true; git push
+        run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add bitrate-F0x12GzMnyY-clients.txt vpngate-nodes.txt; git commit -m bitrate-F0x12GzMnyY-clients || true; git push
