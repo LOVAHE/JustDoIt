@@ -11,16 +11,10 @@ jobs:
       - uses: denoland/setup-deno@v2
         with: {deno-version: v2.x}
       - run: pip install -U 'yt-dlp[default]'
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq tor netcat-openbsd
       - run: |
-          tor --SocksPort 9050 --ControlPort 9051 --CookieAuthentication 0 --DataDirectory /tmp/tor-data > /tmp/tor.log 2>&1 &
-          for i in $(seq 1 60); do nc -z 127.0.0.1 9050 && break; sleep 1; done
-          : > ytdlp-tor.txt
-          for i in $(seq 1 6); do
-            echo "### circuit $i" >> ytdlp-tor.txt
-            yt-dlp --proxy socks5://127.0.0.1:9050 --remote-components ejs:github --js-runtimes deno -F 'https://youtube.com/watch?v=hBAnXVEgWfM' >> ytdlp-tor.txt 2>&1 || true
-            printf 'AUTHENTICATE\r\nSIGNAL NEWNYM\r\nQUIT\r\n' | nc 127.0.0.1 9051 >/dev/null || true
-            sleep 10
+          mkdir -p clients; n=0
+          for c in web_embedded visionos tv_downgraded tv_simply android web web_safari mweb; do
+            n=$((n+1)); (echo "### $c"; yt-dlp --socket-timeout 20 --retries 1 --remote-components ejs:github --js-runtimes deno --extractor-args "youtube:player_client=$c;player_skip=webpage,configs" -F 'https://youtube.com/watch?v=hBAnXVEgWfM' || true) > "clients/$n" 2>&1 &
           done
-          cat /tmp/tor.log >> ytdlp-tor.txt
-      - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add ytdlp-tor.txt; git commit -m tor || true; git push
+          wait; cat clients/* > ytdlp4.txt
+      - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add ytdlp4.txt; git commit -m ytdlp4 || true; git push
