@@ -8,10 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with: {deno-version: v2.x}
+      - run: pip install -U 'yt-dlp[default]'
       - run: |
-          mkdir -p out; n=0
-          for h in pipedapi.kavin.rocks pipedapi.leptons.xyz pipedapi.nosebs.ru pipedapi-libre.kavin.rocks piped-api.privacy.com.de pipedapi.adminforge.de api.piped.yt pipedapi.drgns.space pipedapi.owo.si pipedapi.ducks.party piped-api.codespace.cz pipedapi.reallyaweso.me api.piped.private.coffee pipedapi.darkness.services pipedapi.orangenet.cc; do
-            n=$((n+1)); (echo "### $h"; curl -A 'Mozilla/5.0' -L --max-time 35 -sS "https://$h/streams/hBAnXVEgWfM" | jq -c '{title,duration,uploader,audioStreams:[.audioStreams[]?|{bitrate,codec,format,mimeType,quality}],videoStreams:[.videoStreams[]?|{bitrate,codec,format,mimeType,quality,width,height,fps,videoOnly}]}') > "out/$n" 2>&1 &
+          : > ytdlp2.txt
+          for c in default web_safari mweb tv android_vr ios; do
+            echo "### $c" >> ytdlp2.txt
+            if [ "$c" = default ]; then a=''; else a="--extractor-args youtube:player_client=$c"; fi
+            yt-dlp --remote-components ejs:github --impersonate chrome $a -F 'https://youtube.com/watch?v=hBAnXVEgWfM' >> ytdlp2.txt 2>&1 || true
           done
-          wait; cat out/* > piped.txt
-      - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add piped.txt; git commit -m piped || true; git push
+      - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add ytdlp2.txt; git commit -m ytdlp2 || true; git push
