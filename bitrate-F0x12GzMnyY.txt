@@ -1,0 +1,31 @@
+8
+1	JP	219.100.37.81	2817317	724148907
+2	US	68.8.68.187	1881644	373753034
+3	KR	221.144.146.230	1485871	67362267
+4	RO	217.138.212.62	1388384	300683654
+5	MM	103.198.148.130	1346044	183814302
+6	TH	49.48.131.176	803492	464803648
+7	HK	218.103.208.187	678256	865787498
+8	FI	84.251.69.243	659724	228979906
+### /tmp/vpn-1.ovpn
+VPN_LOCAL=10.238.146.1
+219.100.37.238
+[youtube] Extracting URL: https://youtube.com/watch?v=F0x12GzMnyY
+[youtube] F0x12GzMnyY: Downloading webpage
+[youtube] F0x12GzMnyY: Downloading android vr player API JSON
+[info] Available formats for F0x12GzMnyY:
+ID  EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC        VBR ACODEC      ABR ASR MORE INFO
+--------------------------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                  mhtml | images                                storyboard
+sb2 mhtml 80x45        0    |                  mhtml | images                                storyboard
+sb1 mhtml 160x90       0    |                  mhtml | images                                storyboard
+sb0 mhtml 320x180      0    |                  mhtml | images                                storyboard
+139 m4a   audio only      2 |   74.47MiB   49k https | audio only        mp4a.40.5   49k 22k low, m4a_dash
+140 m4a   audio only      2 |  197.64MiB  129k https | audio only        mp4a.40.2  129k 44k medium, m4a_dash
+251 webm  audio only      2 |  177.18MiB  116k https | audio only        opus       116k 48k medium, webm_dash
+160 mp4   256x144     30    |   84.67MiB   55k https | avc1.4d400c   55k video only          144p, mp4_dash
+134 mp4   640x360     30    |  374.46MiB  245k https | avc1.4d401e  245k video only          360p, mp4_dash
+18  mp4   640x360     30  2 |  446.80MiB  293k https | avc1.42001E       mp4a.40.2       22k 360p
+298 mp4   1280x720    60    |    1.95GiB 1306k https | avc1.640020 1306k video only          720p60, mp4_dash
+299 mp4   1920x1080   60    |    3.63GiB 2434k https | avc1.64002a 2434k video only          1080p60, mp4_dash
+SUCCESS
