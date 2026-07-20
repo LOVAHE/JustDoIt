@@ -8,27 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: denoland/setup-deno@v2
-        with: {deno-version: v2.x}
-      - run: pip install -U 'yt-dlp[default]'
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq openvpn
       - run: |
-          : > vpngate.txt
-          python tmp_vpngate.py >> vpngate.txt 2>&1 || true
-          cat vpngate-nodes.txt >> vpngate.txt 2>&1 || true
-          for f in /tmp/vpn-*.ovpn; do
-            echo "### $f" >> vpngate.txt
-            sudo pkill openvpn 2>/dev/null || true; sudo ip link delete tun0 2>/dev/null || true
-            sudo openvpn --config "$f" --daemon --log /tmp/ovpn.log || true
-            up=0; for i in $(seq 1 25); do if ip link show tun0 >/dev/null 2>&1; then up=1; break; fi; sleep 1; done
-            if [ "$up" != 1 ]; then echo NO_TUN >> vpngate.txt; cat /tmp/ovpn.log >> vpngate.txt; continue; fi
-            for h in www.youtube.com youtube.com youtubei.googleapis.com www.googleapis.com i.ytimg.com; do
-              for ip in $(getent ahostsv4 "$h" | awk '{print $1}' | sort -u); do sudo ip route replace "$ip/32" dev tun0 2>>vpngate.txt || true; done
-            done
-            curl --interface tun0 -sS --max-time 12 https://api.ipify.org >> vpngate.txt 2>&1 || true; echo >> vpngate.txt
-            if yt-dlp --socket-timeout 25 --retries 1 --remote-components ejs:github --js-runtimes deno -F 'https://youtube.com/watch?v=hBAnXVEgWfM' >> vpngate.txt 2>&1; then echo SUCCESS >> vpngate.txt; break; fi
-            cat /tmp/ovpn.log | tail -20 >> vpngate.txt
-          done
-          sudo pkill openvpn 2>/dev/null || true
+          python tmp_vpngate.py > ovpn-debug.txt 2>&1 || true
+          sudo timeout 30 openvpn --config /tmp/vpn-1.ovpn --verb 4 >> ovpn-debug.txt 2>&1 || true
+          ip addr >> ovpn-debug.txt 2>&1 || true
       - if: always()
-        run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add vpngate.txt vpngate-nodes.txt; git commit -m vpngate || true; git push
+        run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add ovpn-debug.txt; git commit -m ovpn-debug || true; git push
