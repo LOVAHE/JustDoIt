@@ -1,0 +1,84 @@
+### default
+Traceback (most recent call last):
+  File "/home/runner/.local/bin/yt-dlp", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 1080, in main
+    _exit(*variadic(_real_main(argv)))
+                    ^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 982, in _real_main
+    with YoutubeDL(ydl_opts) as ydl:
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/YoutubeDL.py", line 770, in __init__
+    raise YoutubeDLError(
+yt_dlp.utils.YoutubeDLError: Impersonate target "chrome" is not available. Use --list-impersonate-targets to see available targets. You may be missing dependencies required to support this target.
+### web_safari
+Traceback (most recent call last):
+  File "/home/runner/.local/bin/yt-dlp", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 1080, in main
+    _exit(*variadic(_real_main(argv)))
+                    ^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 982, in _real_main
+    with YoutubeDL(ydl_opts) as ydl:
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/YoutubeDL.py", line 770, in __init__
+    raise YoutubeDLError(
+yt_dlp.utils.YoutubeDLError: Impersonate target "chrome" is not available. Use --list-impersonate-targets to see available targets. You may be missing dependencies required to support this target.
+### mweb
+Traceback (most recent call last):
+  File "/home/runner/.local/bin/yt-dlp", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 1080, in main
+    _exit(*variadic(_real_main(argv)))
+                    ^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 982, in _real_main
+    with YoutubeDL(ydl_opts) as ydl:
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/YoutubeDL.py", line 770, in __init__
+    raise YoutubeDLError(
+yt_dlp.utils.YoutubeDLError: Impersonate target "chrome" is not available. Use --list-impersonate-targets to see available targets. You may be missing dependencies required to support this target.
+### tv
+Traceback (most recent call last):
+  File "/home/runner/.local/bin/yt-dlp", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 1080, in main
+    _exit(*variadic(_real_main(argv)))
+                    ^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 982, in _real_main
+    with YoutubeDL(ydl_opts) as ydl:
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/YoutubeDL.py", line 770, in __init__
+    raise YoutubeDLError(
+yt_dlp.utils.YoutubeDLError: Impersonate target "chrome" is not available. Use --list-impersonate-targets to see available targets. You may be missing dependencies required to support this target.
+### android_vr
+Traceback (most recent call last):
+  File "/home/runner/.local/bin/yt-dlp", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 1080, in main
+    _exit(*variadic(_real_main(argv)))
+                    ^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 982, in _real_main
+    with YoutubeDL(ydl_opts) as ydl:
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/YoutubeDL.py", line 770, in __init__
+    raise YoutubeDLError(
+yt_dlp.utils.YoutubeDLError: Impersonate target "chrome" is not available. Use --list-impersonate-targets to see available targets. You may be missing dependencies required to support this target.
+### ios
+Traceback (most recent call last):
+  File "/home/runner/.local/bin/yt-dlp", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 1080, in main
+    _exit(*variadic(_real_main(argv)))
+                    ^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/__init__.py", line 982, in _real_main
+    with YoutubeDL(ydl_opts) as ydl:
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/yt_dlp/YoutubeDL.py", line 770, in __init__
+    raise YoutubeDLError(
+yt_dlp.utils.YoutubeDLError: Impersonate target "chrome" is not available. Use --list-impersonate-targets to see available targets. You may be missing dependencies required to support this target.
