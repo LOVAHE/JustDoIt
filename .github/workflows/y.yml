@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install yt-dlp
-      - run: yt-dlp -F 'https://youtube.com/watch?v=hBAnXVEgWfM' > ytdlp.txt 2>&1 || true
-      - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add ytdlp.txt; git commit -m y || true; git push
+      - run: |
+          for h in inv.nadeko.net invidious.nerdvpn.de yt.chocolatemoo53.com; do
+            echo "### $h"
+            curl -A 'Mozilla/5.0' -L --max-time 90 -sS "https://$h/api/v1/videos/hBAnXVEgWfM" | jq -c '{title,lengthSeconds,adaptiveFormats,formatStreams}' || true
+          done > api.txt 2>&1
+      - run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add api.txt; git commit -m api || true; git push
