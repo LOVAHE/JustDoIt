@@ -11,28 +11,34 @@ jobs:
       - uses: denoland/setup-deno@v2
         with: {deno-version: v2.x}
       - run: pip install -U 'yt-dlp[default]'
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq openvpn
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq openvpn ffmpeg
       - run: |
-          : > bitrate-F0x12GzMnyY-clients.txt
-          python tmp_vpngate.py >> bitrate-F0x12GzMnyY-clients.txt 2>&1 || true
-          cat vpngate-nodes.txt >> bitrate-F0x12GzMnyY-clients.txt 2>&1 || true
+          : > actual-bitrate-F0x12GzMnyY.txt
+          python tmp_vpngate.py >> actual-bitrate-F0x12GzMnyY.txt 2>&1 || true
           for f in /tmp/vpn-*.ovpn; do
-            echo "### $f" >> bitrate-F0x12GzMnyY-clients.txt
             sudo ip link delete tun0 2>/dev/null || true
             sudo openvpn --config "$f" > /tmp/ovpn.log 2>&1 & pid=$!
             up=0; for i in $(seq 1 30); do if ip link show tun0 >/dev/null 2>&1; then up=1; break; fi; sleep 1; done
-            if [ "$up" != 1 ]; then echo NO_TUN >> bitrate-F0x12GzMnyY-clients.txt; sudo kill $pid 2>/dev/null || true; continue; fi
+            if [ "$up" != 1 ]; then sudo kill $pid 2>/dev/null || true; continue; fi
             src=$(ip -4 addr show tun0 | awk '/inet /{print $2}' | cut -d/ -f1)
             sudo ip route flush table 100 || true
             sudo ip route add table 100 default dev tun0
             sudo ip rule add priority 100 from "$src/32" table 100
-            for c in default ios tv web_safari android_vr; do
-              echo "===== CLIENT $c =====" >> bitrate-F0x12GzMnyY-clients.txt
-              yt-dlp --source-address "$src" --socket-timeout 25 --retries 1 --remote-components ejs:github --js-runtimes deno --extractor-args "youtube:player_client=$c" -F 'https://youtube.com/watch?v=F0x12GzMnyY' >> bitrate-F0x12GzMnyY-clients.txt 2>&1 || true
+            yt-dlp --source-address "$src" --remote-components ejs:github --js-runtimes deno --extractor-args 'youtube:player_client=android_vr' -f 299 --download-sections '*00:10:00-00:11:00' --force-keyframes-at-cuts -o dash299.mp4 'https://youtube.com/watch?v=F0x12GzMnyY' >> actual-bitrate-F0x12GzMnyY.txt 2>&1 || true
+            yt-dlp --source-address "$src" --remote-components ejs:github --js-runtimes deno --extractor-args 'youtube:player_client=web_safari' -f 301 --download-sections '*00:10:00-00:11:00' --force-keyframes-at-cuts -o hls301.mp4 'https://youtube.com/watch?v=F0x12GzMnyY' >> actual-bitrate-F0x12GzMnyY.txt 2>&1 || true
+            for x in dash299.mp4 hls301.mp4; do
+              echo "===== $x =====" >> actual-bitrate-F0x12GzMnyY.txt
+              ls -l "$x" >> actual-bitrate-F0x12GzMnyY.txt 2>&1 || true
+              ffprobe -v error -show_entries format=duration,size,bit_rate -show_entries stream=index,codec_type,codec_name,bit_rate -of json "$x" >> actual-bitrate-F0x12GzMnyY.txt 2>&1 || true
+              d=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$x" 2>/dev/null)
+              for t in v a; do
+                s=$(ffprobe -v error -select_streams ${t}:0 -show_packets -show_entries packet=size -of csv=p=0 "$x" 2>/dev/null | awk '{n+=$1} END{print n+0}')
+                awk -v t="$t" -v s="$s" -v d="$d" 'BEGIN{if(d>0) printf "%s_packet_avg_kbps=%.3f\n",t,s*8/d/1000}' >> actual-bitrate-F0x12GzMnyY.txt
+              done
             done
             sudo ip rule del priority 100 2>/dev/null || true; sudo ip route flush table 100 || true
             sudo kill $pid 2>/dev/null || true; wait $pid 2>/dev/null || true; sudo ip link delete tun0 2>/dev/null || true
             break
           done
       - if: always()
-        run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add bitrate-F0x12GzMnyY-clients.txt vpngate-nodes.txt; git commit -m bitrate-F0x12GzMnyY-clients || true; git push
+        run: git config user.name bot; git config user.email bot@users.noreply.github.com; git add actual-bitrate-F0x12GzMnyY.txt; git commit -m actual-bitrate-F0x12GzMnyY || true; git push
