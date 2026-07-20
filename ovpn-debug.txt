@@ -1,0 +1,360 @@
+6
+2026-07-20 14:58:46 us=688597 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2026-07-20 14:58:46 us=688673 Current Parameter Settings:
+2026-07-20 14:58:46 us=688679   config = '/tmp/vpn-1.ovpn'
+2026-07-20 14:58:46 us=688685   mode = 0
+2026-07-20 14:58:46 us=688690   persist_config = DISABLED
+2026-07-20 14:58:46 us=688695   persist_mode = 1
+2026-07-20 14:58:46 us=688700   show_ciphers = DISABLED
+2026-07-20 14:58:46 us=688706   show_digests = DISABLED
+2026-07-20 14:58:46 us=688710   show_engines = DISABLED
+2026-07-20 14:58:46 us=688715   genkey = DISABLED
+2026-07-20 14:58:46 us=688721   genkey_filename = '[UNDEF]'
+2026-07-20 14:58:46 us=688726   key_pass_file = '[UNDEF]'
+2026-07-20 14:58:46 us=688731   show_tls_ciphers = DISABLED
+2026-07-20 14:58:46 us=688736   connect_retry_max = 1
+2026-07-20 14:58:46 us=688741 Connection profiles [0]:
+2026-07-20 14:58:46 us=688746   proto = tcp-client
+2026-07-20 14:58:46 us=688751   local = '[UNDEF]'
+2026-07-20 14:58:46 us=688756   local_port = '[UNDEF]'
+2026-07-20 14:58:46 us=688761   remote = '219.100.37.207'
+2026-07-20 14:58:46 us=688766   remote_port = '443'
+2026-07-20 14:58:46 us=688771   remote_float = DISABLED
+2026-07-20 14:58:46 us=688776   bind_defined = DISABLED
+2026-07-20 14:58:46 us=688782   bind_local = DISABLED
+2026-07-20 14:58:46 us=688787   bind_ipv6_only = DISABLED
+2026-07-20 14:58:46 us=688792   connect_retry_seconds = 1
+2026-07-20 14:58:46 us=688797   connect_timeout = 15
+2026-07-20 14:58:46 us=688803   socks_proxy_server = '[UNDEF]'
+2026-07-20 14:58:46 us=688808   socks_proxy_port = '[UNDEF]'
+2026-07-20 14:58:46 us=688813   tun_mtu = 1500
+2026-07-20 14:58:46 us=688818   tun_mtu_defined = ENABLED
+2026-07-20 14:58:46 us=688823   link_mtu = 1500
+2026-07-20 14:58:46 us=688828   link_mtu_defined = DISABLED
+2026-07-20 14:58:46 us=688834   tun_mtu_extra = 0
+2026-07-20 14:58:46 us=688839   tun_mtu_extra_defined = DISABLED
+2026-07-20 14:58:46 us=688844   tls_mtu = 1250
+2026-07-20 14:58:46 us=688849   mtu_discover_type = -1
+2026-07-20 14:58:46 us=688855   fragment = 0
+2026-07-20 14:58:46 us=688860   mssfix = 1492
+2026-07-20 14:58:46 us=688865   mssfix_encap = ENABLED
+2026-07-20 14:58:46 us=688870   mssfix_fixed = DISABLED
+2026-07-20 14:58:46 us=688875   explicit_exit_notification = 0
+2026-07-20 14:58:46 us=688880   tls_auth_file = '[UNDEF]'
+2026-07-20 14:58:46 us=688886   key_direction = not set
+2026-07-20 14:58:46 us=688891   tls_crypt_file = '[UNDEF]'
+2026-07-20 14:58:46 us=688896   tls_crypt_v2_file = '[UNDEF]'
+2026-07-20 14:58:46 us=688901 Connection profiles END
+2026-07-20 14:58:46 us=688906   remote_random = DISABLED
+2026-07-20 14:58:46 us=688911   ipchange = '[UNDEF]'
+2026-07-20 14:58:46 us=688916   dev = 'tun'
+2026-07-20 14:58:46 us=688921   dev_type = '[UNDEF]'
+2026-07-20 14:58:46 us=688927   dev_node = '[UNDEF]'
+2026-07-20 14:58:46 us=688932   tuntap_options.disable_dco = ENABLED
+2026-07-20 14:58:46 us=688937   lladdr = '[UNDEF]'
+2026-07-20 14:58:46 us=688942   topology = 1
+2026-07-20 14:58:46 us=688947   ifconfig_local = '[UNDEF]'
+2026-07-20 14:58:46 us=688952   ifconfig_remote_netmask = '[UNDEF]'
+2026-07-20 14:58:46 us=688957   ifconfig_noexec = DISABLED
+2026-07-20 14:58:46 us=688962   ifconfig_nowarn = DISABLED
+2026-07-20 14:58:46 us=688968   ifconfig_ipv6_local = '[UNDEF]'
+2026-07-20 14:58:46 us=688973   ifconfig_ipv6_netbits = 0
+2026-07-20 14:58:46 us=688978   ifconfig_ipv6_remote = '[UNDEF]'
+2026-07-20 14:58:46 us=688983   shaper = 0
+2026-07-20 14:58:46 us=688988   mtu_test = 0
+2026-07-20 14:58:46 us=688993   mlock = DISABLED
+2026-07-20 14:58:46 us=688998   keepalive_ping = 0
+2026-07-20 14:58:46 us=689003   keepalive_timeout = 0
+2026-07-20 14:58:46 us=689008   inactivity_timeout = 0
+2026-07-20 14:58:46 us=689014   session_timeout = 0
+2026-07-20 14:58:46 us=689019   inactivity_minimum_bytes = 0
+2026-07-20 14:58:46 us=689024   ping_send_timeout = 0
+2026-07-20 14:58:46 us=689029   ping_rec_timeout = 0
+2026-07-20 14:58:46 us=689034   ping_rec_timeout_action = 0
+2026-07-20 14:58:46 us=689039   ping_timer_remote = DISABLED
+2026-07-20 14:58:46 us=689051   remap_sigusr1 = 0
+2026-07-20 14:58:46 us=689056   persist_tun = ENABLED
+2026-07-20 14:58:46 us=689061   persist_local_ip = DISABLED
+2026-07-20 14:58:46 us=689066   persist_remote_ip = DISABLED
+2026-07-20 14:58:46 us=689071   persist_key = ENABLED
+2026-07-20 14:58:46 us=689076   passtos = DISABLED
+2026-07-20 14:58:46 us=689082   resolve_retry_seconds = 1000000000
+2026-07-20 14:58:46 us=689087   resolve_in_advance = DISABLED
+2026-07-20 14:58:46 us=689092   username = '[UNDEF]'
+2026-07-20 14:58:46 us=689097   groupname = '[UNDEF]'
+2026-07-20 14:58:46 us=689102   chroot_dir = '[UNDEF]'
+2026-07-20 14:58:46 us=689107   cd_dir = '[UNDEF]'
+2026-07-20 14:58:46 us=689112   writepid = '[UNDEF]'
+2026-07-20 14:58:46 us=689117   up_script = '[UNDEF]'
+2026-07-20 14:58:46 us=689122   down_script = '[UNDEF]'
+2026-07-20 14:58:46 us=689127   down_pre = DISABLED
+2026-07-20 14:58:46 us=689132   up_restart = DISABLED
+2026-07-20 14:58:46 us=689137   up_delay = DISABLED
+2026-07-20 14:58:46 us=689142   daemon = DISABLED
+2026-07-20 14:58:46 us=689147   log = DISABLED
+2026-07-20 14:58:46 us=689152   suppress_timestamps = DISABLED
+2026-07-20 14:58:46 us=689157   machine_readable_output = DISABLED
+2026-07-20 14:58:46 us=689162   nice = 0
+2026-07-20 14:58:46 us=689168   verbosity = 4
+2026-07-20 14:58:46 us=689173   mute = 0
+2026-07-20 14:58:46 us=689178   gremlin = 0
+2026-07-20 14:58:46 us=689183   status_file = '[UNDEF]'
+2026-07-20 14:58:46 us=689188   status_file_version = 1
+2026-07-20 14:58:46 us=689193   status_file_update_freq = 60
+2026-07-20 14:58:46 us=689199   occ = ENABLED
+2026-07-20 14:58:46 us=689204   rcvbuf = 0
+2026-07-20 14:58:46 us=689209   sndbuf = 0
+2026-07-20 14:58:46 us=689214   mark = 0
+2026-07-20 14:58:46 us=689219   sockflags = 0
+2026-07-20 14:58:46 us=689225   fast_io = DISABLED
+2026-07-20 14:58:46 us=689230   comp.alg = 0
+2026-07-20 14:58:46 us=689235   comp.flags = 24
+2026-07-20 14:58:46 us=689240   route_script = '[UNDEF]'
+2026-07-20 14:58:46 us=689245   route_default_gateway = '[UNDEF]'
+2026-07-20 14:58:46 us=689250   route_default_metric = 0
+2026-07-20 14:58:46 us=689255   route_noexec = DISABLED
+2026-07-20 14:58:46 us=689260   route_delay = 0
+2026-07-20 14:58:46 us=689266   route_delay_window = 30
+2026-07-20 14:58:46 us=689271   route_delay_defined = DISABLED
+2026-07-20 14:58:46 us=689276   route_nopull = ENABLED
+2026-07-20 14:58:46 us=689281   route_gateway_via_dhcp = DISABLED
+2026-07-20 14:58:46 us=689286   allow_pull_fqdn = DISABLED
+2026-07-20 14:58:46 us=689292   management_addr = '[UNDEF]'
+2026-07-20 14:58:46 us=689297   management_port = '[UNDEF]'
+2026-07-20 14:58:46 us=689302   management_user_pass = '[UNDEF]'
+2026-07-20 14:58:46 us=689307   management_log_history_cache = 250
+2026-07-20 14:58:46 us=689312   management_echo_buffer_size = 100
+2026-07-20 14:58:46 us=689317   management_client_user = '[UNDEF]'
+2026-07-20 14:58:46 us=689322   management_client_group = '[UNDEF]'
+2026-07-20 14:58:46 us=689328   management_flags = 0
+2026-07-20 14:58:46 us=689333   shared_secret_file = '[UNDEF]'
+2026-07-20 14:58:46 us=689338   key_direction = not set
+2026-07-20 14:58:46 us=689344   ciphername = 'AES-128-CBC'
+2026-07-20 14:58:46 us=689349   ncp_ciphers = 'AES-128-CBC'
+2026-07-20 14:58:46 us=689354   authname = 'SHA1'
+2026-07-20 14:58:46 us=689359   engine = DISABLED
+2026-07-20 14:58:46 us=689364   replay = ENABLED
+2026-07-20 14:58:46 us=689369   mute_replay_warnings = DISABLED
+2026-07-20 14:58:46 us=689375   replay_window = 64
+2026-07-20 14:58:46 us=689380   replay_time = 15
+2026-07-20 14:58:46 us=689385   packet_id_file = '[UNDEF]'
+2026-07-20 14:58:46 us=689390   test_crypto = DISABLED
+2026-07-20 14:58:46 us=689395   tls_server = DISABLED
+2026-07-20 14:58:46 us=689400   tls_client = ENABLED
+2026-07-20 14:58:46 us=689405   ca_file = '[INLINE]'
+2026-07-20 14:58:46 us=689411   ca_path = '[UNDEF]'
+2026-07-20 14:58:46 us=689416   dh_file = '[UNDEF]'
+2026-07-20 14:58:46 us=689421   cert_file = '[INLINE]'
+2026-07-20 14:58:46 us=689426   extra_certs_file = '[UNDEF]'
+2026-07-20 14:58:46 us=689431   priv_key_file = '[INLINE]'
+2026-07-20 14:58:46 us=689440   pkcs12_file = '[UNDEF]'
+2026-07-20 14:58:46 us=689445   cipher_list = '[UNDEF]'
+2026-07-20 14:58:46 us=689450   cipher_list_tls13 = '[UNDEF]'
+2026-07-20 14:58:46 us=689456   tls_cert_profile = '[UNDEF]'
+2026-07-20 14:58:46 us=689461   tls_verify = '[UNDEF]'
+2026-07-20 14:58:46 us=689466   tls_export_peer_cert_dir = '[UNDEF]'
+2026-07-20 14:58:46 us=689471   verify_x509_type = 0
+2026-07-20 14:58:46 us=689476   verify_x509_name = '[UNDEF]'
+2026-07-20 14:58:46 us=689481   crl_file = '[UNDEF]'
+2026-07-20 14:58:46 us=689486   ns_cert_type = 0
+2026-07-20 14:58:46 us=689491   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689497   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689502   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689507   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689512   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689517   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689522   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689527   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689533   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689538   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689543   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689548   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689553   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689558   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689563   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689568   remote_cert_ku[i] = 0
+2026-07-20 14:58:46 us=689573   remote_cert_eku = '[UNDEF]'
+2026-07-20 14:58:46 us=689579   ssl_flags = 192
+2026-07-20 14:58:46 us=689584   tls_timeout = 2
+2026-07-20 14:58:46 us=689589   renegotiate_bytes = -1
+2026-07-20 14:58:46 us=689594   renegotiate_packets = 0
+2026-07-20 14:58:46 us=689599   renegotiate_seconds = 3600
+2026-07-20 14:58:46 us=689604   handshake_window = 60
+2026-07-20 14:58:46 us=689610   transition_window = 3600
+2026-07-20 14:58:46 us=689615   single_session = DISABLED
+2026-07-20 14:58:46 us=689620   push_peer_info = DISABLED
+2026-07-20 14:58:46 us=689644   tls_exit = DISABLED
+2026-07-20 14:58:46 us=689650   tls_crypt_v2_metadata = '[UNDEF]'
+2026-07-20 14:58:46 us=689655   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689660   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689666   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689671   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689676   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689681   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689686   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689691   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689696   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689701   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689706   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689711   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689716   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689722   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689727   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689732   pkcs11_protected_authentication = DISABLED
+2026-07-20 14:58:46 us=689737   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689742   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689748   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689753   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689758   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689763   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689768   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689773   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689778   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689783   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689789   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689794   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689802   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689807   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689812   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689817   pkcs11_private_mode = 00000000
+2026-07-20 14:58:46 us=689822   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689827   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689832   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689837   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689842   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689847   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689852   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689857   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689862   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689867   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689872   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689878   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689883   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689888   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689893   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689898   pkcs11_cert_private = DISABLED
+2026-07-20 14:58:46 us=689903   pkcs11_pin_cache_period = -1
+2026-07-20 14:58:46 us=689908   pkcs11_id = '[UNDEF]'
+2026-07-20 14:58:46 us=689914   pkcs11_id_management = DISABLED
+2026-07-20 14:58:46 us=689920   server_network = 0.0.0.0
+2026-07-20 14:58:46 us=689926   server_netmask = 0.0.0.0
+2026-07-20 14:58:46 us=689935   server_network_ipv6 = ::
+2026-07-20 14:58:46 us=689940   server_netbits_ipv6 = 0
+2026-07-20 14:58:46 us=689946   server_bridge_ip = 0.0.0.0
+2026-07-20 14:58:46 us=689951   server_bridge_netmask = 0.0.0.0
+2026-07-20 14:58:46 us=689957   server_bridge_pool_start = 0.0.0.0
+2026-07-20 14:58:46 us=689962   server_bridge_pool_end = 0.0.0.0
+2026-07-20 14:58:46 us=689967   ifconfig_pool_defined = DISABLED
+2026-07-20 14:58:46 us=689973   ifconfig_pool_start = 0.0.0.0
+2026-07-20 14:58:46 us=689978   ifconfig_pool_end = 0.0.0.0
+2026-07-20 14:58:46 us=689983   ifconfig_pool_netmask = 0.0.0.0
+2026-07-20 14:58:46 us=689989   ifconfig_pool_persist_filename = '[UNDEF]'
+2026-07-20 14:58:46 us=689994   ifconfig_pool_persist_refresh_freq = 600
+2026-07-20 14:58:46 us=689999   ifconfig_ipv6_pool_defined = DISABLED
+2026-07-20 14:58:46 us=690004   ifconfig_ipv6_pool_base = ::
+2026-07-20 14:58:46 us=690010   ifconfig_ipv6_pool_netbits = 0
+2026-07-20 14:58:46 us=690015   n_bcast_buf = 256
+2026-07-20 14:58:46 us=690020   tcp_queue_limit = 64
+2026-07-20 14:58:46 us=690026   real_hash_size = 256
+2026-07-20 14:58:46 us=690031   virtual_hash_size = 256
+2026-07-20 14:58:46 us=690036   client_connect_script = '[UNDEF]'
+2026-07-20 14:58:46 us=690041   learn_address_script = '[UNDEF]'
+2026-07-20 14:58:46 us=690047   client_disconnect_script = '[UNDEF]'
+2026-07-20 14:58:46 us=690052   client_crresponse_script = '[UNDEF]'
+2026-07-20 14:58:46 us=690057   client_config_dir = '[UNDEF]'
+2026-07-20 14:58:46 us=690063   ccd_exclusive = DISABLED
+2026-07-20 14:58:46 us=690068   tmp_dir = '/tmp'
+2026-07-20 14:58:46 us=690073   push_ifconfig_defined = DISABLED
+2026-07-20 14:58:46 us=690078   push_ifconfig_local = 0.0.0.0
+2026-07-20 14:58:46 us=690084   push_ifconfig_remote_netmask = 0.0.0.0
+2026-07-20 14:58:46 us=690090   push_ifconfig_ipv6_defined = DISABLED
+2026-07-20 14:58:46 us=690095   push_ifconfig_ipv6_local = ::/0
+2026-07-20 14:58:46 us=690101   push_ifconfig_ipv6_remote = ::
+2026-07-20 14:58:46 us=690106   enable_c2c = DISABLED
+2026-07-20 14:58:46 us=690111   duplicate_cn = DISABLED
+2026-07-20 14:58:46 us=690117   cf_max = 0
+2026-07-20 14:58:46 us=690122   cf_per = 0
+2026-07-20 14:58:46 us=690127   cf_initial_max = 100
+2026-07-20 14:58:46 us=690133   cf_initial_per = 10
+2026-07-20 14:58:46 us=690138   max_clients = 1024
+2026-07-20 14:58:46 us=690143   max_routes_per_client = 256
+2026-07-20 14:58:46 us=690148   auth_user_pass_verify_script = '[UNDEF]'
+2026-07-20 14:58:46 us=690154   auth_user_pass_verify_script_via_file = DISABLED
+2026-07-20 14:58:46 us=690162   auth_token_generate = DISABLED
+2026-07-20 14:58:46 us=690167   force_key_material_export = DISABLED
+2026-07-20 14:58:46 us=690172   auth_token_lifetime = 0
+2026-07-20 14:58:46 us=690178   auth_token_secret_file = '[UNDEF]'
+2026-07-20 14:58:46 us=690183   port_share_host = '[UNDEF]'
+2026-07-20 14:58:46 us=690188   port_share_port = '[UNDEF]'
+2026-07-20 14:58:46 us=690193   vlan_tagging = DISABLED
+2026-07-20 14:58:46 us=690199   vlan_accept = all
+2026-07-20 14:58:46 us=690204   vlan_pvid = 1
+2026-07-20 14:58:46 us=690209   client = ENABLED
+2026-07-20 14:58:46 us=690214   pull = ENABLED
+2026-07-20 14:58:46 us=690220   auth_user_pass_file = '[UNDEF]'
+2026-07-20 14:58:46 us=690226 OpenVPN 2.6.19 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] [DCO]
+2026-07-20 14:58:46 us=690236 library versions: OpenSSL 3.0.13 30 Jan 2024, LZO 2.10
+2026-07-20 14:58:46 us=690252 DCO version: N/A
+2026-07-20 14:58:46 us=690322 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2026-07-20 14:58:46 us=691659 Control Channel MTU parms [ mss_fix:0 max_frag:0 tun_mtu:1250 tun_max_mtu:0 headroom:126 payload:1600 tailroom:126 ET:0 ]
+2026-07-20 14:58:46 us=691690 Data Channel MTU parms [ mss_fix:0 max_frag:0 tun_mtu:1500 tun_max_mtu:1600 headroom:136 payload:1768 tailroom:562 ET:0 ]
+2026-07-20 14:58:46 us=691730 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.207:443
+2026-07-20 14:58:46 us=691753 Socket Buffers: R=[131072->131072] S=[16384->16384]
+2026-07-20 14:58:46 us=691760 Attempting to establish TCP connection with [AF_INET]219.100.37.207:443
+2026-07-20 14:58:46 us=856218 TCP connection established with [AF_INET]219.100.37.207:443
+2026-07-20 14:58:46 us=856269 TCPv4_CLIENT link local: (not bound)
+2026-07-20 14:58:46 us=856277 TCPv4_CLIENT link remote: [AF_INET]219.100.37.207:443
+2026-07-20 14:58:47 us=129728 TLS: Initial packet from [AF_INET]219.100.37.207:443, sid=4ca2b276 5b480a94
+2026-07-20 14:58:47 us=298287 VERIFY OK: depth=3, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2026-07-20 14:58:47 us=298484 VERIFY OK: depth=2, C=US, O=ISRG, CN=Root YR
+2026-07-20 14:58:47 us=298636 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=YR2
+2026-07-20 14:58:47 us=298720 VERIFY OK: depth=0, CN=opengw.net
+2026-07-20 14:58:47 us=675036 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2026-07-20 14:58:47 us=675098 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.207:443
+2026-07-20 14:58:47 us=675110 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2026-07-20 14:58:47 us=675156 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2026-07-20 14:58:48 us=790411 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2026-07-20 14:58:50 us=954105 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.245.160.161 10.245.160.162,dhcp-option DNS 10.245.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.245.160.162,redirect-gateway def1'
+2026-07-20 14:58:50 us=954200 Options error: option 'dhcp-option' cannot be used in this context ([PUSH-OPTIONS])
+2026-07-20 14:58:50 us=954209 Options error: option 'dhcp-option' cannot be used in this context ([PUSH-OPTIONS])
+2026-07-20 14:58:50 us=954218 Options error: option 'redirect-gateway' cannot be used in this context ([PUSH-OPTIONS])
+2026-07-20 14:58:50 us=954228 OPTIONS IMPORT: --ifconfig/up options modified
+2026-07-20 14:58:50 us=954233 OPTIONS IMPORT: route-related options modified
+2026-07-20 14:58:50 us=954240 Using peer cipher 'AES-128-CBC'
+2026-07-20 14:58:50 us=954591 TUN/TAP device tun0 opened
+2026-07-20 14:58:50 us=954605 do_ifconfig, ipv4=1, ipv6=0
+2026-07-20 14:58:50 us=954662 net_iface_mtu_set: mtu 1500 for tun0
+2026-07-20 14:58:50 us=954718 net_iface_up: set tun0 up
+2026-07-20 14:58:50 us=954845 net_addr_ptp_v4_add: 10.245.160.161 peer 10.245.160.162 dev tun0
+2026-07-20 14:58:50 us=954949 Data Channel MTU parms [ mss_fix:1363 max_frag:0 tun_mtu:1500 tun_max_mtu:1600 headroom:136 payload:1768 tailroom:562 ET:0 ]
+2026-07-20 14:58:50 us=955134 Outgoing Data Channel: Cipher 'AES-128-CBC' initialized with 128 bit key
+2026-07-20 14:58:50 us=955154 Outgoing Data Channel: Using 160 bit message hash 'SHA1' for HMAC authentication
+2026-07-20 14:58:50 us=955165 Incoming Data Channel: Cipher 'AES-128-CBC' initialized with 128 bit key
+2026-07-20 14:58:50 us=955179 Incoming Data Channel: Using 160 bit message hash 'SHA1' for HMAC authentication
+2026-07-20 14:58:50 us=955191 Initialization Sequence Completed
+2026-07-20 14:58:50 us=955200 Data Channel: cipher 'AES-128-CBC', auth 'SHA1'
+2026-07-20 14:58:50 us=955208 Timers: ping 3, ping-restart 10
+2026-07-20 14:59:16 us=682961 event_wait : Interrupted system call (fd=-1,code=4)
+2026-07-20 14:59:16 us=683138 TCP/UDP: Closing socket
+2026-07-20 14:59:16 us=683226 Closing TUN/TAP interface
+2026-07-20 14:59:16 us=683234 net_addr_ptp_v4_del: 10.245.160.161 dev tun0
+2026-07-20 14:59:16 us=691689 SIGTERM[hard,] received, process exiting
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 7c:1e:52:d5:2e:df brd ff:ff:ff:ff:ff:ff
+    inet 10.1.0.24/20 metric 100 brd 10.1.15.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7e1e:52ff:fed5:2edf/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enP26632s1: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc mq master eth0 state UP group default qlen 1000
+    link/ether 7c:1e:52:d5:2e:df brd ff:ff:ff:ff:ff:ff
+    altname enP26632p0s2
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 2a:85:be:0b:c1:0b brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
