@@ -1,0 +1,51 @@
+8
+1	JP	219.100.37.101	2521116	546467446
+2	US	24.131.252.109	2143965	396353018
+3	AE	217.165.11.213	1560913	73265045
+4	KR	221.144.146.230	1505447	55199396
+5	RO	217.138.212.62	1467953	311249292
+6	CA	70.79.229.82	1181695	678151783
+7	RU	45.91.54.196	687832	202611854
+8	TH	184.22.14.85	675391	177145925
+### /tmp/vpn-1.ovpn
+===== CLIENT default =====
+[youtube] Extracting URL: https://youtube.com/watch?v=BY6AD4ZgA38
+[youtube] BY6AD4ZgA38: Downloading webpage
+[youtube] BY6AD4ZgA38: Downloading android vr player API JSON
+[info] Available formats for BY6AD4ZgA38:
+ID  EXT   RESOLUTION FPS CH |    FILESIZE   TBR PROTO | VCODEC        VBR ACODEC      ABR ASR MORE INFO
+---------------------------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                   mhtml | images                                storyboard
+sb2 mhtml 80x45        0    |                   mhtml | images                                storyboard
+sb1 mhtml 160x90       0    |                   mhtml | images                                storyboard
+sb0 mhtml 320x180      0    |                   mhtml | images                                storyboard
+139 m4a   audio only      2 |   119.88MiB   49k https | audio only        mp4a.40.5   49k 22k low, m4a_dash
+140 m4a   audio only      2 |   318.16MiB  129k https | audio only        mp4a.40.2  129k 44k medium, m4a_dash
+251 webm  audio only      2 |   293.76MiB  120k https | audio only        opus       120k 48k medium, webm_dash
+160 mp4   256x144     30    |   137.38MiB   56k https | avc1.4d400c   56k video only          144p, mp4_dash
+278 webm  256x144     30    |   197.44MiB   80k https | vp9           80k video only          144p, webm_dash
+133 mp4   426x240     30    |   298.64MiB  122k https | avc1.4d4015  122k video only          240p, mp4_dash
+242 webm  426x240     30    |   209.10MiB   85k https | vp9           85k video only          240p, webm_dash
+134 mp4   640x360     30    |   583.61MiB  237k https | avc1.4d401e  237k video only          360p, mp4_dash
+18  mp4   640x360     30  2 |   700.07MiB  285k https | avc1.42001E       mp4a.40.2       22k 360p
+243 webm  640x360     30    |   359.95MiB  146k https | vp9          146k video only          360p, webm_dash
+135 mp4   854x480     30    |  1019.38MiB  415k https | avc1.4d401f  415k video only          480p, mp4_dash
+244 webm  854x480     30    |   587.03MiB  239k https | vp9          239k video only          480p, webm_dash
+136 mp4   1280x720    30    |     2.02GiB  841k https | avc1.64001f  841k video only          720p, mp4_dash
+247 webm  1280x720    30    |     1.10GiB  458k https | vp9          458k video only          720p, webm_dash
+137 mp4   1920x1080   30    |     3.94GiB 1643k https | avc1.640028 1643k video only          1080p, mp4_dash
+248 webm  1920x1080   30    |     1.78GiB  741k https | vp9          741k video only          1080p, webm_dash
+271 webm  2560x1440   30    |     6.23GiB 2598k https | vp9         2598k video only          1440p, webm_dash
+313 webm  3840x2160   30    |    13.55GiB 5646k https | vp9         5646k video only          2160p, webm_dash
+===== CLIENT web_safari =====
+[youtube] Extracting URL: https://youtube.com/watch?v=BY6AD4ZgA38
+[youtube] BY6AD4ZgA38: Downloading webpage
+WARNING: Only images are available for download. use --list-formats to see them
+[info] Available formats for BY6AD4ZgA38:
+ID  EXT   RESOLUTION FPS | PROTO | VCODEC MORE INFO
+----------------------------------------------------
+sb3 mhtml 48x27        0 | mhtml | images storyboard
+sb2 mhtml 80x45        0 | mhtml | images storyboard
+sb1 mhtml 160x90       0 | mhtml | images storyboard
+sb0 mhtml 320x180      0 | mhtml | images storyboard
+SUCCESS
