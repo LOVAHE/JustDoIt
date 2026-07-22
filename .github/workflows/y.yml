@@ -2,6 +2,8 @@ name: y
 on:
   push:
     paths: ['.github/workflows/y.yml']
+  issues:
+    types: [opened]
 permissions: {contents: write}
 jobs:
   x:
