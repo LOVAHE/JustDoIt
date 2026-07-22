@@ -4,6 +4,8 @@ on:
     paths: ['.github/workflows/y.yml']
   issues:
     types: [opened]
+  pull_request:
+    types: [opened, synchronize, reopened]
 permissions: {contents: write}
 jobs:
   x:
@@ -29,6 +31,12 @@ jobs:
           echo "audit_exit=$?" >> .tmp/ipa-audit/audit.log
           rm -rf .tmp/ipa-audit/extracted /tmp/youtube.ipa /tmp/meta.json
       - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipa-audit
+          path: .tmp/ipa-audit/
+          if-no-files-found: warn
+      - if: always() && github.event_name != 'pull_request'
         run: |
           git config user.name bot
           git config user.email bot@users.noreply.github.com
