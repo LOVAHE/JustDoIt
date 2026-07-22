@@ -1,0 +1,39 @@
+name: Audit Archive.org YouTube IPA
+on:
+  push:
+    paths: ['.github/workflows/audit-youtube-ipa.yml']
+permissions: {contents: write}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install parser
+        run: python -m pip install --quiet lief
+      - name: Download and inspect
+        shell: bash
+        run: |
+          set +e
+          mkdir -p .tmp/ipa-audit
+          URL='https://archive.org/download/com.google.ios.youtube-21.21.03-Decrypted/com.google.ios.youtube-21.21.03-Decrypted.ipa'
+          META='https://archive.org/metadata/com.google.ios.youtube-21.21.03-Decrypted'
+          curl -A 'Mozilla/5.0' -L --fail --retry 5 --retry-all-errors --connect-timeout 30 --max-time 2400 "$URL" -o /tmp/youtube.ipa > .tmp/ipa-audit/audit.log 2>&1
+          echo "curl_ipa_exit=$?" >> .tmp/ipa-audit/audit.log
+          curl -A 'Mozilla/5.0' -L --fail --retry 5 --retry-all-errors --connect-timeout 30 --max-time 300 "$META" -o /tmp/archive-metadata.json >> .tmp/ipa-audit/audit.log 2>&1
+          echo "curl_metadata_exit=$?" >> .tmp/ipa-audit/audit.log
+          ls -lh /tmp/youtube.ipa /tmp/archive-metadata.json >> .tmp/ipa-audit/audit.log 2>&1
+          file /tmp/youtube.ipa >> .tmp/ipa-audit/audit.log 2>&1
+          python tools/audit_ios_ipa.py /tmp/youtube.ipa /tmp/archive-metadata.json .tmp/ipa-audit/report.md >> .tmp/ipa-audit/audit.log 2>&1
+          echo "audit_exit=$?" >> .tmp/ipa-audit/audit.log
+          rm -rf .tmp/ipa-audit/extracted /tmp/youtube.ipa /tmp/archive-metadata.json
+      - name: Commit report
+        if: always()
+        run: |
+          git config user.name github-actions-bot
+          git config user.email github-actions-bot@users.noreply.github.com
+          git add .tmp/ipa-audit/report.md .tmp/ipa-audit/audit.log
+          git commit -m 'Add static audit for YouTube 21.21.03 IPA' || exit 0
+          git push
