@@ -1,6 +1,7 @@
 name: Audit Archive.org YouTube IPA
 on:
   push:
+    branches: [main]
     paths: ['.github/workflows/audit-youtube-ipa.yml']
 permissions: {contents: write}
 jobs:
